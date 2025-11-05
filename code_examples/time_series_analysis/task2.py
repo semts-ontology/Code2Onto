@@ -22,5 +22,5 @@ out = pd.DataFrame({
 })
 out.to_csv("outputs/task2.csv", index=False)
 
-from remote_agent_server import analyze_code
+from ai_pipeline_orchestrator import analyze_code
 analyze_code(output_path="tests/task2.ttl")

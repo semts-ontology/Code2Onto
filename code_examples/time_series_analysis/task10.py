@@ -10,5 +10,5 @@ imputer = Imputer(method="mean")
 y_imputed = imputer.fit_transform(y)
 pd.DataFrame({"imputed": y_imputed.values}, index=y_imputed.index).to_csv("outputs/task10.csv")
 
-from remote_agent_server import analyze_code
+from ai_pipeline_orchestrator import analyze_code
 analyze_code(output_path="tests/task10.ttl")

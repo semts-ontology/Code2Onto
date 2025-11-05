@@ -12,5 +12,5 @@ kmeans = TimeSeriesKMeans(n_clusters=3, metric="dtw", random_state=0)
 labels = kmeans.fit_predict(X_small)
 pd.DataFrame({"label": labels, "target": y_small}).to_csv("outputs/task7.csv", index=False)
 
-from remote_agent_server import analyze_code
+from ai_pipeline_orchestrator import analyze_code
 analyze_code(output_path="tests/task7.ttl")

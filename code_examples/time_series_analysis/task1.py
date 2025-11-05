@@ -10,5 +10,5 @@ fh = ForecastingHorizon(range(1, 13), is_relative=True)
 forecast = forecaster.predict(fh)
 pd.DataFrame({"forecast": forecast.values}, index=forecast.index).to_csv("outputs/task1.csv")
 
-from remote_agent_server import analyze_code
+from ai_pipeline_orchestrator import analyze_code
 analyze_code(output_path="tests/task1.ttl")

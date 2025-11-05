@@ -9,5 +9,5 @@ clf.fit(X_train, y_train)
 labels = clf.predict(X_test)
 pd.DataFrame({"label": labels, "true": y_test}).to_csv("outputs/task8.csv", index=False)
 
-from remote_agent_server import analyze_code
+from ai_pipeline_orchestrator import analyze_code
 analyze_code(output_path="tests/task8.ttl")

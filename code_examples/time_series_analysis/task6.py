@@ -10,5 +10,5 @@ z_aligned = z.iloc[:m]
 corr = float(np.corrcoef(x_aligned.values.reshape(-1), z_aligned.values.reshape(-1))[0, 1])
 pd.DataFrame({"correlation": [corr]}).to_csv("outputs/task6.csv", index=False)
 
-from remote_agent_server import analyze_code
+from ai_pipeline_orchestrator import analyze_code
 analyze_code(output_path="tests/task6.ttl")

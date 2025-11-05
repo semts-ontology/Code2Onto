@@ -12,5 +12,5 @@ anomalies = (np.abs(z_test) > 2.0).astype(int)
 res = pd.DataFrame({"test_value": test.values, "zscore": z_test.values, "anomalies": anomalies.values, "train_mean": train_mean, "train_std": train_std}, index=test.index)
 res.to_csv("outputs/task4.csv")
 
-from remote_agent_server import analyze_code
+from ai_pipeline_orchestrator import analyze_code
 analyze_code(output_path="tests/task4.ttl")
